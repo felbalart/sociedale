@@ -1,0 +1,2 @@
+class HolderRegistryPolicy < ApplicationPolicy
+end

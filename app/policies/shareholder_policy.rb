@@ -1,0 +1,2 @@
+class ShareholderPolicy < ApplicationPolicy
+end

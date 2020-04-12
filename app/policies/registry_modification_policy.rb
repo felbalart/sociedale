@@ -1,0 +1,2 @@
+class RegistryModificationPolicy < ApplicationPolicy
+end

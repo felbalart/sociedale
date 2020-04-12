@@ -1,0 +1,22 @@
+<%= content_tag(:div, nil, id: 'reserves-data-container', data: { reserves: resource&.company.active_registries })%>
+<div class="main-form">
+  <%= semantic_form_for resource do |f| %>
+      <%= f.inputs name: 'Modificación de Registro de Accionistas' do %>
+        <%= f.input :company %>
+        <%= f.input :motive, as: :select, collection: RegistryModification.motive.options %>
+        <%= f.input :modification_date, as: :date_select %>
+        <%= f.input :comment, as: :text %>
+      <% end %>
+
+      <div class="hidden-reserve-form-mold" style="display: none;">
+        <%= render partial: 'reserve_sub_form', locals: { f: f }%>
+      </div>
+
+      <div class="visible-reserve-forms-container">
+        <!--forms are added by JS-->
+      </div>
+
+      <button type="button" id="add-reserve-button" onclick="addReserveForm();">+ Reserva</button>
+      <%=f.submit%>
+  <%end%>
+</div>

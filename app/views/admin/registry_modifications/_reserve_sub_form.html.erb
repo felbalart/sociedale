@@ -1,0 +1,19 @@
+<%= f.inputs name: 'Registro 0' do %>
+    <%= f.semantic_fields_for :'reserve0' do |rf| %>
+        <%= rf.input :id, as: :number, wrapper_html: { style: 'display: none;' }  %>
+        <%= rf.input :registry_date, label: HolderRegistry.human_attribute_name(:registry_date), as: :string, input_html: { class: '' } %>
+        <%= rf.input :shareholder_id, label: HolderRegistry.human_attribute_name(:shareholder_id), as: :string, input_html: { class: '' } %>
+        <%= rf.input :shares_count, label: HolderRegistry.human_attribute_name(:shares_count), as: :string, input_html: { class: '' } %>
+        <%= rf.input :paid_shares_count, label: HolderRegistry.human_attribute_name(:paid_shares_count), as: :string, input_html: { class: '' } %>
+        <%= rf.input :subscription_date, label: HolderRegistry.human_attribute_name(:subscription_date), as: :string, input_html: { class: '' } %>
+        <%= rf.input :serie, label: HolderRegistry.human_attribute_name(:serie), as: :string, input_html: { class: '' } %>
+        <%= rf.input :category, label: HolderRegistry.human_attribute_name(:category), as: :string, input_html: { class: '' } %>
+        <%= rf.input :share_price, label: HolderRegistry.human_attribute_name(:share_price), as: :string, input_html: { class: '' } %>
+        <%= rf.input :equity_percentage, label: HolderRegistry.human_attribute_name(:equity_percentage), as: :string, input_html: { class: '' } %>
+        <%= rf.input :has_agreement, label: HolderRegistry.human_attribute_name(:has_agreement), as: :string, input_html: { class: '' } %>
+        <%= rf.input :create_modif, label: HolderRegistry.human_attribute_name(:create_modif), as: :string, input_html: { class: '' } %>
+        <%= rf.input :outdate_modif, label: HolderRegistry.human_attribute_name(:outdate_modif), as: :string, input_html: { class: '' } %>
+        <%= rf.input :outdate_date, label: HolderRegistry.human_attribute_name(:outdate_date), as: :string, input_html: { class: '' } %>
+        <%= rf.input :has_collateral, label: HolderRegistry.human_attribute_name(:has_collateral), as: :string, input_html: { class: '' } %>
+    <% end %>
+<% end %>

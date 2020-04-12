@@ -1,2 +1,86 @@
 es-CL:
-  hello: "Hola mundo"
+  date:
+    formats:
+      default: "%A %d/%m/%Y"
+      long: "%A %d/%m/%Y"
+  time:
+    formats:
+      long: "%A %d/%m/%Y - %H:%M"
+  activerecord:
+    models:
+      User:
+        one: Usuario
+        other: Usuarios
+      company:
+        one: Sociedad
+        other: Sociedades
+      shareholder:
+        one: Accionista
+        other: Accionistas
+      holder_registry:
+        one: Registro Accionista
+        other: Registro Accionistas
+      registry_modification:
+        one: Modificación de Registro
+        other: Modificación de Registros
+    attributes:
+      User:
+        email: Email
+        password: Contraseña
+        first_name: Nombre
+        last_name: Apellido
+        rut: RUT
+        dv: dv
+        company_id: Compañia
+      company:
+        name: Razón Social
+        rut: RUT
+        dv: dv
+        address: Domicilio
+        logo: logo
+        incorporation_date: Fecha de Constitución
+        ceo: Gerente General
+        company_type: Tipo de Sociedad
+        incorporation_number: Rol Registro de Comercio
+        incorporation_place: Registro Conservador de Comercio
+      shareholder:
+        name: Nombre o Razón Social
+        Last_name: Apellido
+        rut: RUT
+        dv: dv
+        company: Sociedad
+      holder_registry:
+        registry_date: Fecha de registro
+        shareholder_id: Accionista
+        shares_count: Número de acciones suscritas
+        paid_shares_count: Número de acciones pagadas
+        subscription_date: Fecha de suscripción
+        serie: Serie
+        category: Clase
+        share_price: Precio de acción
+        equity_percentage: Porcentaje del capital
+        has_agreement: Pacto de accionistas
+        create_modif: Crear o modificar registro
+        outdate_modif: Desactualizar registro
+        outdate_date: Fecha de desactualización
+        has_collateral: Garantía o Prohibición
+      registry_modification:
+        company_id: Sociedad
+        company: Sociedad
+        motive: Motivo de modificación
+        modification_date: Fecha de motivo
+        comment: Observaciones
+  enumerize:
+    admin_user:
+      role:
+        sysadmin: SysAdmin
+        admin: Admin
+    registry_modification:
+      motive:
+        bylaw_modification: Modificación Estatutos
+        shareholders_meeting: Junta de Accionistas
+        board_meeting: Sesión de Directorio
+        mandate: Mandato
+        ruling: Resolución Judicial
+        shareholders_agreement: Pacto de Accionistas
+        other: Otro
