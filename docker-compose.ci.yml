@@ -1,0 +1,21 @@
+---
+version: '3.4'
+services:
+  test:
+    build:
+      context: "."
+      dockerfile: Dockerfile.ci
+    volumes:
+    - "./vendor/bundle:/usr/local/bundle"
+    environment:
+      RACK_ENV: test
+      POSTGRESQL_USER: postgres
+      POSTGRESQL_HOST: postgresql
+      POSTGRESQL_PORT: '5432'
+    links:
+    - postgresql
+  postgresql:
+    image: postgres:9.4.5
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ''
